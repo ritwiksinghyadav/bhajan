@@ -1,7 +1,8 @@
 import * as React from 'react';
 import bhajanList from '../../../../public/filesList.json'
-import { PdfViewer } from '@/app/_comp/_compo';
+// import { PdfViewer } from '@/app/_comp/_compo';
 import Header from './headercomp';
+import PDFViewer from '@/app/_comp/comp2';
 export interface IAppProps {
     params: any
 }
@@ -16,7 +17,7 @@ export default function App({ params }: IAppProps) {
                 <Header name={data?.name} />
                 <div className='w-full h-[calc(100vh-60px)]'>
 
-                    <PdfViewer pdfUrl={`../bhajanPDF/${data?.fileName}`} />
+                    <PDFViewer pdfUrl={`../bhajanPDF/${data?.fileName}`} />
                 </div>
             </section>
         </div >
