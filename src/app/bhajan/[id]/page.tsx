@@ -9,7 +9,7 @@ export interface IAppProps {
     params: any
 }
 
-export default function App({ params }: IAppProps) {
+export default async function App({ params }: IAppProps) {
     const data = bhajanList.find((item: any) => item.id == params.id)
     return (
         <div className='h-full w-full flex flex-col '>
