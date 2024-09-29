@@ -29,7 +29,7 @@ export default function App(props: IAppProps) {
             <div className='grid md:grid-cols-4 grid-cols-1 w-full overflow-y-auto gap-5 p-2 hidescrollbar'>
                 {/* card */}
                 {bhajanList?.map((item: any) =>
-                    < div key={item.id} className='h-[50px] w-full rounded-md flex items-center gap-3 shadow-xl bg-[#FFF5E1] p-2'
+                    < button key={item.id} className='h-[50px] w-full rounded-md cursor-pointer flex items-center gap-3 shadow-xl bg-[#FFF5E1] p-2'
                         onClick={() => { router.push(`/bhajan/${item.id}`) }}
                     >
                         <FileText
@@ -40,7 +40,7 @@ export default function App(props: IAppProps) {
                                 item.name
                             }
                         </p>
-                    </div>
+                    </button>
                 )
                 }
 
