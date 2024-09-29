@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import bhajanList from '../../../../public/filesList.json'
 // import { PdfViewer } from '@/app/_comp/_compo';
@@ -9,7 +10,7 @@ export interface IAppProps {
     params: any
 }
 
-export default async function App({ params }: IAppProps) {
+export default function App({ params }: IAppProps) {
     const data = bhajanList.find((item: any) => item.id == params.id)
     return (
         <div className='h-full w-full flex flex-col '>
