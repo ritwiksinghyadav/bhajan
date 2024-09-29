@@ -11,6 +11,7 @@ interface PDFViewerProps {
 const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [pageWidth, setPageWidth] = useState<number | null>(null);
+  const [error, setError] = useState<Error | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -33,9 +34,26 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
     setNumPages(numPages);
   }
 
+  function onDocumentLoadError(error: Error): void {
+    setError(error);
+  }
+
+  if (error) {
+    return (
+      <div className="error-message">
+        <p>Your browser may not be compatible with the new version. Please switch to Google Chrome for the best experience.</p>
+        <p>Error details: {error.message}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="pdf-viewer" ref={containerRef}>
-      <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
+      <Document 
+        file={pdfUrl} 
+        onLoadSuccess={onDocumentLoadSuccess}
+        onLoadError={onDocumentLoadError}
+      >
         {Array.from(new Array(numPages), (el, index) => (
           <Page key={`page_${index + 1}`} pageNumber={index + 1} width={pageWidth || undefined} />
         ))}
