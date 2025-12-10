@@ -9,12 +9,8 @@ export default function DownloadPage() {
     const [showInstructions, setShowInstructions] = useState(false);
 
     const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = '/OG.apk';
-        link.download = 'BhajanApp.apk';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Navigate to GitHub Releases download page
+        window.open('https://github.com/ritwiksinghyadav/bhajan/releases/download/v1.0.0/BhajanAmrit.apk', '_blank');
     };
 
     return (
