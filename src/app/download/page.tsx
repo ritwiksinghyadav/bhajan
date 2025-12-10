@@ -9,8 +9,8 @@ export default function DownloadPage() {
     const [showInstructions, setShowInstructions] = useState(false);
 
     const handleDownload = () => {
-        // Navigate to GitHub Releases download page
-        window.open('https://drive.google.com/file/d/10vXZc69YKQ1LZmgUGcy_maOkMHH9UTaH/view?usp=drive_link', '_blank');
+        // Direct download from Google Drive
+        window.location.href = 'https://drive.google.com/uc?export=download&id=10vXZc69YKQ1LZmgUGcy_maOkMHH9UTaH';
     };
 
     return (
