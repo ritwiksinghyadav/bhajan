@@ -10,7 +10,7 @@ export default function DownloadPage() {
 
     const handleDownload = () => {
         // Navigate to GitHub Releases download page
-        window.open('https://github.com/ritwiksinghyadav/bhajan/releases/download/v1.0.0/BhajanAmrit.apk', '_blank');
+        window.open('https://drive.google.com/file/d/10vXZc69YKQ1LZmgUGcy_maOkMHH9UTaH/view?usp=drive_link', '_blank');
     };
 
     return (
