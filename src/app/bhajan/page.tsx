@@ -1,5 +1,5 @@
 'use client';
-import { FileText, Search, X } from 'lucide-react';
+import { Download, FileText, Search, X } from 'lucide-react';
 import * as React from 'react';
 import bhajanList from '../../../public/filesList.json'
 import { useRouter } from 'next/navigation';
@@ -66,10 +66,16 @@ export default function App() {
                             />
                         </div>
                     ) : (
-                        <Search
-                            className='h-[25px] w-[25px] stroke-white stroke-4 cursor-pointer'
-                            onClick={() => setIsSearchOpen(true)}
-                        />
+                        <div className='gap-2 flex'>
+                            <Search
+                                className='h-[25px] w-[25px] stroke-white stroke-4 cursor-pointer'
+                                onClick={() => setIsSearchOpen(true)}
+                            />
+                            <Download
+                                className='h-[25px] w-[25px] stroke-white stroke-2 cursor-pointer'
+                                onClick={() => router.push('/download')}
+                            />
+                        </div>
                     )}
                 </div>
             </section>
