@@ -10,7 +10,7 @@ export default function DownloadPage() {
 
     const handleDownload = () => {
         // Direct download from Google Drive
-        window.location.href = 'https://release-assets.githubusercontent.com/github-production-release-asset/864460268/eda2b6b2-3aa8-4833-b3be-72fbc0c3a5f3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-12-10T14%3A41%3A22Z&rscd=attachment%3B+filename%3DBhajanAmrit.apk&rsct=application%2Fvnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-12-10T13%3A40%3A31Z&ske=2025-12-10T14%3A41%3A22Z&sks=b&skv=2018-11-09&sig=XeBXF1LSk5ohmDTgDxLIHmIXhHJFOT40wRrTDzYuXo0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2NTM3NzYzMSwibmJmIjoxNzY1Mzc0MDMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CBtOgltL-U7U0oY8l3tw-V-14x_o02X2_94M908jdUk&response-content-disposition=attachment%3B%20filename%3DBhajanAmrit.apk&response-content-type=application%2Fvnd.android.package-archive';
+        window.location.href = 'https://github.com/ritwiksinghyadav/bhajan/releases/download/v1.0.0/BhajanAmrit.apk';
         // window.location.href = 'https://drive.google.com/drive/folders/1fWZibnX2i_kqn_n2Ta_9LFTAk6Ubavsy?usp=sharing';
         // window.location.href = 'https://drive.google.com/uc?export=download&id=10vXZc69YKQ1LZmgUGcy_maOkMHH9UTaH';
     };
