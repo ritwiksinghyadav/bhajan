@@ -10,7 +10,8 @@ export default function DownloadPage() {
 
     const handleDownload = () => {
         // Direct download from Google Drive
-        window.location.href = 'https://drive.google.com/uc?export=download&id=10vXZc69YKQ1LZmgUGcy_maOkMHH9UTaH';
+        window.location.href = 'https://drive.google.com/drive/folders/1fWZibnX2i_kqn_n2Ta_9LFTAk6Ubavsy?usp=sharing';
+        // window.location.href = 'https://drive.google.com/uc?export=download&id=10vXZc69YKQ1LZmgUGcy_maOkMHH9UTaH';
     };
 
     return (
