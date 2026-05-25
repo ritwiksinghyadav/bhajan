@@ -42,7 +42,7 @@ export default function DownloadPage() {
             </header>
 
             {/* Main Content */}
-            <main className='max-w-2xl mx-auto px-4 py-12'>
+            <main className='max-w-2xl mx-auto px-4 pt-12 pb-32'>
                 {/* Hero Section */}
                 <div className='text-center mb-12'>
                     <h1 className='text-4xl md:text-5xl font-bold text-[#ab3116] mb-3'>

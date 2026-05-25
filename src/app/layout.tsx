@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     apple: "/logo.png",
     icon: "/logo.png",
   },
+  other: {
+    google: 'notranslate',
+  },
 };
 
 export const viewport: Viewport = {
@@ -45,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="hi">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
@@ -54,9 +57,7 @@ export default function RootLayout({
 
         {/* Wraps entire app — shows offline page when disconnected */}
         <NetworkGuard>
-          <div className="pb-24">
-            {children}
-          </div>
+          {children}
           <BottomNav />
         </NetworkGuard>
       </body>
