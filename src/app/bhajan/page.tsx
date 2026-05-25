@@ -79,7 +79,7 @@ export default function App() {
                     )}
                 </div>
             </section>
-            <div className=' w-full overflow-y-auto gap-5 p-2 hidescrollbar'>
+            <div className=' w-full overflow-y-auto gap-5 p-2 pb-28 hidescrollbar'>
                 <div className='font-bold text-[#ab3116] text-center text-xl'>
                     आत्म विभोर के सूत्र
                 </div>

@@ -1,6 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import BottomNav from "./_comp/BottomNav";
+import SWRegistration from "./_comp/SWRegistration";
+import NetworkGuard from "./_comp/NetworkGuard";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,8 +17,26 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Bhajan App",
-  description: "This App Has the compilation of all the bhajans",
+  title: "भजनामृत — Bhajan App",
+  description: "आत्म विभोर के सूत्र — श्री श्री बाबा श्री जी के 285+ भजनों का संग्रह",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    title: "भजनामृत",
+    statusBarStyle: "default",
+  },
+  icons: {
+    apple: "/logo.png",
+    icon: "/logo.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FF4C4C",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({
@@ -24,11 +45,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="hi">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {children}
+        {/* Service Worker registration (no-op on server) */}
+        <SWRegistration />
+
+        {/* Wraps entire app — shows offline page when disconnected */}
+        <NetworkGuard>
+          <div className="pb-24">
+            {children}
+          </div>
+          <BottomNav />
+        </NetworkGuard>
       </body>
     </html>
   );

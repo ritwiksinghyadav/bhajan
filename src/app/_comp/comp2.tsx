@@ -49,8 +49,8 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
 
   return (
     <div className="pdf-viewer" ref={containerRef}>
-      <Document 
-        file={pdfUrl} 
+      <Document
+        file={pdfUrl}
         onLoadSuccess={onDocumentLoadSuccess}
         onLoadError={onDocumentLoadError}
       >
