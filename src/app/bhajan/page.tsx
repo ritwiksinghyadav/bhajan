@@ -71,10 +71,10 @@ export default function App() {
                                 className='h-[25px] w-[25px] stroke-white stroke-4 cursor-pointer'
                                 onClick={() => setIsSearchOpen(true)}
                             />
-                            <Download
+                            {/* <Download
                                 className='h-[25px] w-[25px] stroke-white stroke-2 cursor-pointer'
                                 onClick={() => router.push('/download')}
-                            />
+                            /> */}
                         </div>
                     )}
                 </div>
